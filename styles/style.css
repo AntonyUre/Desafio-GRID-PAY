@@ -1,0 +1,120 @@
+:root{
+    --color-primario: hsl(179, 62%, 43%);
+    --color-secundario: hsl(71, 73%, 54%);
+    --color-terciario: #4EBFB4;
+    --color-cuartario:#79BF65;
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    Font-size: 16px;
+}
+body{
+    background: var(--Light-Gray);
+}
+.container{
+    width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px rgba(33, 30, 36, 0.199);
+}
+.top{
+    grid-column: span 2;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.top h1{
+    margin-bottom: 30px;
+    color: var(--color-primario);
+    font-weight: 700;
+    font-size: 24px;
+}
+.top h2{
+    margin-bottom: 15px;
+    color: var(--color-secundario);
+    font-weight: 700;
+    font-size: 18px;
+}
+.top p{
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+    line-height: 1.5;
+}
+.left{
+    background: var(--color-primario);
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 0 0 0 15px;
+    color: #fff;
+}
+.left h2{
+    margin-bottom: 20px;
+}
+.left .line{
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.left .price{
+    font-size: 35px ;
+    margin-right: 15px;
+}
+.left .opacity{
+    color: var(--Light-Gray);
+    font-weight: 400;
+}
+.left button{
+    width: 100%;
+    height: 45px;
+    background: var(--color-secundario);
+    box-shadow: 2px 2px 20px rgba(33, 30, 36, 0.199);
+    border: none;
+    border-radius:8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 20px;
+    outline: none;
+}
+.left button:hover{
+    background: var(--color-cuartario);
+}
+.right{
+    background: var(--color-terciario);
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 0 0 15px 0;
+    color: #fff;
+}
+.right h2{
+    margin-bottom: 20px;
+}
+.right p{
+    font-weight: 100;
+    line-height: 1.5;
+    color: var(--Light-Gray);
+    font-weight: lighter;
+}
+@media (max-width:375px){
+    .container{
+        width: 100%;
+        display: block;
+    }
+    .top, .left, .right{
+        width: 100%;
+        padding: 30px;
+    }
+    .left{
+        border-radius: 0;
+    }
+}
