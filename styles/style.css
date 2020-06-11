@@ -18,10 +18,10 @@ body{
 }
 .container{
     width: 650px;
-    position: absolute;
-    top: 50%;
+    margin:100px auto;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     background: #fff;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -105,8 +105,21 @@ body{
     color: var(--Light-Gray);
     font-weight: lighter;
 }
+@media (max-width:650px){
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+    .top{
+        padding: 7%;
+    }
+    .left, .right{
+        padding: 13%;
+    }
+}
 @media (max-width:375px){
     .container{
+        margin: 0;
         width: 100%;
         display: block;
     }
@@ -116,5 +129,8 @@ body{
     }
     .left{
         border-radius: 0;
+    }
+    .right{
+        border-radius: 0 0 15px 15px;
     }
 }
